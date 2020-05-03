@@ -1,7 +1,8 @@
-" Betreed het huidige millenium
-set nocompatible
+" This is my personal .vimrc. It is heavily based on https://github.com/changemewtf/no_plugins
+"
+" https://github.com/misterwrong/vimrc
 
-" Nettere leader-toets
+set nocompatible
 let mapleader = ","
 
 " Zet syntax en plug-ins aan (voor netrw)
@@ -29,7 +30,7 @@ set nowrap
 set clipboard=unnamed
 
 " Bestandstype-specifieke instellingen
-autocmd BufRead,BufNewFile *.txt,*.sh,*.yml,*.json,*.html set shiftwidth=2|set autoindent
+autocmd BufRead,BufNewFile *.txt,*.ini,*.sh,*.yml,*.json,*.html set shiftwidth=2|set autoindent
 autocmd BufRead,BufNewFile *.js,*.java,*.groovy,*.c,*.h set shiftwidth=4|set indentexpr
 
 set foldcolumn=4
@@ -54,7 +55,6 @@ nnoremap <Leader><C-]> <C-w><C-]><C-w>T
 
 " BESTANDSBEHEER
 
-" Tweaks voor browsen
 let g:netrw_banner=0        " irritante banner uit
 let g:netrw_browse_split=4  " open in eerdere venster
 let g:netrw_altv=1          " open splitst naar rechts 
@@ -65,4 +65,3 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " - :edit om een map te openen in bestandsbeheer
 " - <CR>/v/t om te openen in een h-split/v-split/tab
 " - check |netrw-browse-maps| voor meer mappings
-
