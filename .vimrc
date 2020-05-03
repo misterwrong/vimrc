@@ -18,7 +18,7 @@ noremap  <Left> ""
 noremap! <Left> <Esc>
 noremap  <Right> ""
 noremap! <Right> <Esc>
-set backspace=
+set backspace=indent,eol,start
 
 " Terminal in venster onderaan van 8 regels hoog
 noremap <Leader>t :bo ter<CR><C-W>8<C-_>
