@@ -31,7 +31,7 @@ set clipboard=unnamed
 
 " Bestandstype-specifieke instellingen
 autocmd BufRead,BufNewFile *.txt,*.ini,*.sh,*.yml,*.json,*.html set shiftwidth=2|set autoindent
-autocmd BufRead,BufNewFile *.js,*.java,*.groovy,*.c,*.h set shiftwidth=4|set indentexpr
+autocmd BufRead,BufNewFile *.js,*.java,*.groovy,*.c,*.h set shiftwidth=4|set cindent
 
 set foldcolumn=4
 
