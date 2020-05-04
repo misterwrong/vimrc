@@ -4,6 +4,7 @@
 
 set nocompatible
 let mapleader = ","
+colorscheme desert
 
 " Zet syntax en plug-ins aan (voor netrw)
 syntax enable
