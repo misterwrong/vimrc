@@ -1,5 +1,4 @@
 syntax on
-set number
 set nowrap
 set clipboard=unnamed
 set sidescrolloff=10

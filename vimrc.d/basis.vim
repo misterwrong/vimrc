@@ -8,6 +8,9 @@ cabbrev h vert bot h
 set nojoinspaces
 set nowrapscan
 
+set number
+set relativenumber
+
 noremap  <Up> ""
 noremap! <Up> <Esc>
 noremap  <Down> ""
