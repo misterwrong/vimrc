@@ -3,8 +3,9 @@
 " https://github.com/misterwrong/vimrc
 
 set nocompatible
-let mapleader = ","
+let mapleader=","
 colorscheme desert
+set mouse=""
 
 " Zet syntax en plug-ins aan (voor netrw)
 syntax enable
