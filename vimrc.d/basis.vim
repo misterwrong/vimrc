@@ -5,6 +5,8 @@ set mouse=""
 syntax enable
 filetype plugin on
 cabbrev h vert bot h
+set nojoinspaces
+set nowrapscan
 
 noremap  <Up> ""
 noremap! <Up> <Esc>

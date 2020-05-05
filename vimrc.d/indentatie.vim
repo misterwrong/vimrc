@@ -10,10 +10,14 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set foldcolumn=4
+set breakindent
+set fo+=j
 
-autocmd BufRead,BufNewFile *.txt,*.ini,*.sh,*.yml,*.json,*.html set shiftwidth=2|set autoindent
-autocmd BufRead,BufNewFile *.js,*.java,*.groovy,*.c,*.h set shiftwidth=4|set cindent
+filetype indent on
+set smartindent
 
+autocmd BufRead,BufNewFile *.txt set wrap|set shiftwidth=2|set sts=2
+autocmd BufRead,BufNewFile *.txt,*.ini,*.sh,*.yml,*.json,*.html set shiftwidth=2|set sts=2
 autocmd BufRead,BufNewFile *java set makeprg=mvn\ clean\ install
 
 " Syntastic
@@ -28,5 +32,3 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_error_symbol = "✗"
 let g:syntastic_warning_symbol = "⚠"
-
-
