@@ -1,17 +1,14 @@
-" This is my personal .vimrc. It is heavily based on https://github.com/changemewtf/no_plugins
-"
+" Dit is mijn persoonlijke .vimrc. Het is zwaar gebaseerd op https://github.com/changemewtf/no_plugins
+"  
 " https://github.com/misterwrong/vimrc
 
 set nocompatible
-let mapleader=","
 colorscheme desert
+let mapleader=","
 set mouse=""
-
-" Zet syntax en plug-ins aan (voor netrw)
 syntax enable
 filetype plugin on
 
-"  Geen cursortoetsen en zo
 noremap  <Up> ""
 noremap! <Up> <Esc>
 noremap  <Down> ""
@@ -20,42 +17,34 @@ noremap  <Left> ""
 noremap! <Left> <Esc>
 noremap  <Right> ""
 noremap! <Right> <Esc>
+
+:imap Tab <C-N>
 set backspace=indent,eol,start
 
 " Terminal in venster onderaan van 8 regels hoog
 noremap <Leader>t :bo ter<CR><C-W>8<C-_>
 
-" Bruikbaarheid
+" 2. Programmeren en indentatie
+
 syntax on
 set number
 set nowrap
 set clipboard=unnamed
+set sidescrolloff=10
 
-" Bestandstype-specifieke instellingen
+set expandtab
+set textwidth=120
+set tabstop=4 
+set softtabstop=4
+set shiftwidth=4
+set foldcolumn=4
+
 autocmd BufRead,BufNewFile *.txt,*.ini,*.sh,*.yml,*.json,*.html set shiftwidth=2|set autoindent
 autocmd BufRead,BufNewFile *.js,*.java,*.groovy,*.c,*.h set shiftwidth=4|set cindent
 
-set foldcolumn=4
+autocmd BufRead,BufNewFile *java set makeprg=mvn\ clean\ install
 
-" FUZZY ZOEKEN
-
-" Doorzoek mappen recursief. Zorgt voor tab-completering van alle bestandsgerelateerde taken:
-set path+=**
-" Toon alle matchende bestanden bij tab-completering:
-set wildmenu
-
-" TAGS
-
-" Maak een tag-bestand aan (eerst ctags installeren):
-command! MakeTags !ctags -R --exclude=*.class .
-nnoremap <Leader><C-]> <C-w><C-]><C-w>T
-
-" - ^]   spring naar tag onder de cursor
-" - ,^]  spring naar tag onder de cursor in een nieuwe tab
-" - g^]  voor ambigue tags
-" - ^t   om terug op de tag stack te springen
-
-" BESTANDSBEHEER
+" 3. Bestandsbeheer
 
 let g:netrw_banner=0        " irritante banner uit
 let g:netrw_browse_split=4  " open in eerdere venster
@@ -67,3 +56,18 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 " - :edit om een map te openen in bestandsbeheer
 " - <CR>/v/t om te openen in een h-split/v-split/tab
 " - check |netrw-browse-maps| voor meer mappings
+
+" Doorzoek mappen recursief. Zorgt voor tab-completering van alle bestandsgerelateerde taken:
+set path+=**
+" Toon alle matchende bestanden bij tab-completering:
+set wildmenu
+
+" 4. Tags
+
+command! MakeTags !ctags -R --exclude=*.class .
+nnoremap <Leader><C-]> <C-w><C-]><C-w>T
+
+" - ^]   spring naar tag onder de cursor
+" - ,^]  spring naar tag onder de cursor in een nieuwe tab
+" - g^]  voor ambigue tags
+" - ^t   om terug op de tag stack te springen
