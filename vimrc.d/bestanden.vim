@@ -1,5 +1,3 @@
-" Bestandsbeheer
-
 let g:netrw_banner=0        " irritante banner uit
 let g:netrw_browse_split=4  " open in bestaand venster
 let g:netrw_altv=1          " open splitst naar rechts 

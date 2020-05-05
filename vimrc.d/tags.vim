@@ -1,5 +1,3 @@
-" Tags
-
 command! MakeTags !ctags -R --exclude=*.class .
 nnoremap <Leader><C-]> <C-w><C-]><C-w>T
 

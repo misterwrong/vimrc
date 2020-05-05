@@ -1,5 +1,3 @@
-" Basisinstellingen
-
 set nocompatible
 colorscheme desert
 let mapleader=","

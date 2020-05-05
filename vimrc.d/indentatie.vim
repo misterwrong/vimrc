@@ -1,5 +1,3 @@
-" Programmeren en indentatie
-
 syntax on
 set number
 set nowrap
