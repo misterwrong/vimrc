@@ -1,4 +1,4 @@
-" Dit is mijn persoonlijke .vimrc. Het is zwaar gebaseerd op https://github.com/changemewtf/no_plugins
+" This is my personal .vimrc, heavily based on https://github.com/changemewtf/no_plugins
 "  
 " https://github.com/misterwrong/vimrc
 

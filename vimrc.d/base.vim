@@ -23,5 +23,5 @@ noremap! <Right> <Esc>
 :imap Tab <C-N>
 set backspace=indent,eol,start
 
-" Terminal in venster onderaan van 8 regels hoog
+" Terminal below, 8 lines high
 noremap <Leader>t :bo ter<CR><C-W>8<C-_>
